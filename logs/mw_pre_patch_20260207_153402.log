@@ -1,0 +1,45 @@
+2026-02-07 15:34:02,122 | INFO     | setup_logger | Logging initialized. Log file: logs/mw_pre_patch_20260207_153402.log
+2026-02-07 15:34:02,122 | INFO     | main | Starting Maintenance Window pre-patch scan
+2026-02-07 15:34:02,122 | INFO     | read_csv_local | Reading accounts from CSV: accounts.csv
+2026-02-07 15:34:02,122 | INFO     | read_csv_local | Loaded 1 account rows
+2026-02-07 15:34:02,122 | INFO     | main | Processing account=862683271180, region=us-east-1, role=Python_SSM_Role_POC
+2026-02-07 15:34:02,122 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-07 15:34:03,292 | INFO     | main | Checking MW java-testing (ID: mw-0127e3cd140fe33fb)
+2026-02-07 15:34:03,293 | DEBUG    | main | Skipping MW java-testing (MW not starting with 'mmpatching')
+2026-02-07 15:34:03,293 | INFO     | main | Checking MW mmpatching-rnd-mmema-lower (ID: mw-02634a7d8df1a7c63)
+2026-02-07 15:34:03,293 | DEBUG    | runs_today | Evaluating NextExecutionTime: 2026-02-07T21:32-05:00
+2026-02-07 15:34:03,293 | DEBUG    | runs_today | runs_today result: False
+2026-02-07 15:34:03,293 | INFO     | main | Checking MW rnd-sandbox-linux-patching (ID: mw-03d3a2dd5ae0199be)
+2026-02-07 15:34:03,293 | DEBUG    | main | Skipping MW rnd-sandbox-linux-patching (no NextExecutionTime)
+2026-02-07 15:34:03,293 | INFO     | main | Checking MW al2023-patch-window (ID: mw-0666e9f0b64f596fb)
+2026-02-07 15:34:03,293 | DEBUG    | main | Skipping MW al2023-patch-window (no NextExecutionTime)
+2026-02-07 15:34:03,293 | INFO     | main | Checking MW mmpatching_dummy_2 (ID: mw-068e5e881af11c400)
+2026-02-07 15:34:03,293 | DEBUG    | runs_today | Evaluating NextExecutionTime: 2026-02-07T10:06Z
+2026-02-07 15:34:03,293 | DEBUG    | runs_today | runs_today result: True
+2026-02-07 15:34:03,293 | INFO     | get_target_count | Resolving target count for MW mw-068e5e881af11c400
+2026-02-07 15:34:03,599 | INFO     | get_target_count | Target count for MW mw-068e5e881af11c400: 0
+2026-02-07 15:34:03,599 | INFO     | main | MW running today: mmpatching_dummy_2 (targets=0)
+2026-02-07 15:34:03,600 | INFO     | main | Checking MW Test (ID: mw-0782d1acad02f9d9b)
+2026-02-07 15:34:03,600 | DEBUG    | main | Skipping MW Test (MW not starting with 'mmpatching')
+2026-02-07 15:34:03,600 | INFO     | main | Checking MW mm-overridebaseline-poc (ID: mw-07ad93525f891415a)
+2026-02-07 15:34:03,600 | DEBUG    | main | Skipping MW mm-overridebaseline-poc (no NextExecutionTime)
+2026-02-07 15:34:03,600 | INFO     | main | Checking MW mmpatchingDummy (ID: mw-0a69d443878c3dde6)
+2026-02-07 15:34:03,600 | DEBUG    | runs_today | Evaluating NextExecutionTime: 2026-02-07T10:06Z
+2026-02-07 15:34:03,600 | DEBUG    | runs_today | runs_today result: True
+2026-02-07 15:34:03,600 | INFO     | get_target_count | Resolving target count for MW mw-0a69d443878c3dde6
+2026-02-07 15:34:03,865 | DEBUG    | get_target_count | InstanceIds target: ['i-0a53ed10e374e37f3', 'i-09c869b5873b34611', 'i-018342fe656db8551']
+2026-02-07 15:34:03,866 | INFO     | get_target_count | Target count for MW mw-0a69d443878c3dde6: 3
+2026-02-07 15:34:03,866 | INFO     | main | MW running today: mmpatchingDummy (targets=3)
+2026-02-07 15:34:03,866 | INFO     | main | Checking MW first-attempt (ID: mw-0d9f40d2d41e65f7a)
+2026-02-07 15:34:03,866 | DEBUG    | main | Skipping MW first-attempt (MW not starting with 'mmpatching')
+2026-02-07 15:34:03,866 | INFO     | main | Summary of Maintenance Windows running today (Skipping MW not starting with 'mmpatching'):
+2026-02-07 15:34:03,867 | INFO     | main |   1) AccountId=862683271180 | MWName=mmpatching_dummy_2 | MWId=mw-068e5e881af11c400 | TargetCount=0
+2026-02-07 15:34:03,867 | INFO     | main |   2) AccountId=862683271180 | MWName=mmpatchingDummy | MWId=mw-0a69d443878c3dde6 | TargetCount=3
+2026-02-07 15:34:03,867 | INFO     | write_csv_to_s3 | Writing CSV to s3://mmpatching-custom-patchbaseline-dev/pre_patch_notification/mw-running-today-output.csv
+2026-02-07 15:34:05,239 | INFO     | write_csv_to_s3 | CSV successfully written to S3
+2026-02-07 15:34:05,239 | INFO     | build_html_table | Building HTML email body
+2026-02-07 15:34:05,239 | INFO     | load_email_config | Loading email config from email_account.csv
+2026-02-07 15:34:05,240 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-07 15:34:05,250 | INFO     | send_email_ses | Sending SES email to ['abhishek.jha@modmed.com']
+2026-02-07 15:34:06,201 | INFO     | send_email_ses | SES email sent successfully. MessageId=0100019c378f0622-9c275af1-e717-4641-97ee-ae24be936730-000000
+2026-02-07 15:34:06,204 | INFO     | main | Script completed successfully
