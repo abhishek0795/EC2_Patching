@@ -1,0 +1,38 @@
+2026-02-10 21:57:45,533 | INFO     | setup_logger | Logging initialized. Log file: logs/mw_post_patch_20260210_215745.log
+2026-02-10 21:57:45,533 | INFO     | <module> | Script execution started
+2026-02-10 21:57:45,533 | INFO     | post_patch_function | Starting Maintenance Window post-patch scan
+2026-02-10 21:57:45,533 | INFO     | load_shared_account | Reading accounts from CSV: email_account.csv
+2026-02-10 21:57:45,533 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-10 21:57:45,628 | INFO     | read_csv_from_s3 | Reading CSV from s3://mmpatching-custom-patchbaseline-dev/pre_patch_notification/mw-running-today-output.csv
+2026-02-10 21:57:46,745 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-10 21:57:46,846 | DEBUG    | get_patch_status_counts | Starting patch status evaluation for Maintenance Window: mw-068e5e881af11c400
+2026-02-10 21:57:46,846 | INFO     | get_patch_status_counts | Processing MaintenanceWindowId: mw-068e5e881af11c400
+2026-02-10 21:57:48,047 | INFO     | get_patch_status_counts | Using latest WindowExecutionId: bd2f9948-76e1-4d70-a2a7-da5bd2e29740
+2026-02-10 21:57:48,351 | DEBUG    | get_patch_status_counts | Found 0 tasks for WindowExecutionId bd2f9948-76e1-4d70-a2a7-da5bd2e29740
+2026-02-10 21:57:48,352 | INFO     | get_patch_status_counts | Patch summary for mw-068e5e881af11c400 → Success: 0, Failure: 0
+2026-02-10 21:57:48,352 | INFO     | post_patch_function | Summary of Maintenance Windows Instances Patching Status
+2026-02-10 21:57:48,392 | DEBUG    | get_patch_status_counts | Starting patch status evaluation for Maintenance Window: mw-0a69d443878c3dde6
+2026-02-10 21:57:48,392 | INFO     | get_patch_status_counts | Processing MaintenanceWindowId: mw-0a69d443878c3dde6
+2026-02-10 21:57:49,317 | INFO     | get_patch_status_counts | Using latest WindowExecutionId: 18342bbc-83e4-4c98-b71a-8304f36430ec
+2026-02-10 21:57:49,553 | DEBUG    | get_patch_status_counts | Found 2 tasks for WindowExecutionId 18342bbc-83e4-4c98-b71a-8304f36430ec
+2026-02-10 21:57:49,554 | DEBUG    | get_patch_status_counts | Evaluating task: TaskArn=AWS-RunPatchBaseline, TaskExecutionId=3eb8a7cc-a7f6-402c-8a9c-1a2f2f5a1fa9
+2026-02-10 21:57:49,840 | DEBUG    | get_patch_status_counts | Processing 1 task invocations for TaskExecutionId 3eb8a7cc-a7f6-402c-8a9c-1a2f2f5a1fa9
+2026-02-10 21:57:49,841 | DEBUG    | get_patch_status_counts | TaskExecutionId 3eb8a7cc-a7f6-402c-8a9c-1a2f2f5a1fa9 operation detected: ['Install']
+2026-02-10 21:57:49,841 | INFO     | get_patch_status_counts | Evaluating Install command execution: ba08acfa-194a-4022-b951-73ec7feafc56
+2026-02-10 21:57:50,108 | DEBUG    | get_patch_status_counts | Instance i-0a53ed10e374e37f3 command status: Success
+2026-02-10 21:57:50,108 | DEBUG    | get_patch_status_counts | Instance i-09c869b5873b34611 command status: Success
+2026-02-10 21:57:50,108 | DEBUG    | get_patch_status_counts | Evaluating task: TaskArn=AWS-RunPatchBaseline, TaskExecutionId=ed395cc6-8a7e-43f6-8299-949b6de043df
+2026-02-10 21:57:50,398 | DEBUG    | get_patch_status_counts | Processing 1 task invocations for TaskExecutionId ed395cc6-8a7e-43f6-8299-949b6de043df
+2026-02-10 21:57:50,399 | DEBUG    | get_patch_status_counts | TaskExecutionId ed395cc6-8a7e-43f6-8299-949b6de043df operation detected: ['Scan']
+2026-02-10 21:57:50,399 | DEBUG    | get_patch_status_counts | Skipping non-install operation for TaskExecutionId ed395cc6-8a7e-43f6-8299-949b6de043df
+2026-02-10 21:57:50,399 | INFO     | get_patch_status_counts | Patch summary for mw-0a69d443878c3dde6 → Success: 2, Failure: 0
+2026-02-10 21:57:50,399 | INFO     | post_patch_function | Summary of Maintenance Windows Instances Patching Status
+2026-02-10 21:57:50,400 | INFO     | post_patch_function |   1) AccountId=862683271180 | MWName=mmpatching_dummy_2 | MWId=mw-068e5e881af11c400 | TargetCount=0 | Success=0 | Failure=0
+2026-02-10 21:57:50,400 | INFO     | post_patch_function |   2) AccountId=862683271180 | MWName=mmpatchingDummy | MWId=mw-0a69d443878c3dde6 | TargetCount=2 | Success=2 | Failure=0
+2026-02-10 21:57:50,400 | INFO     | load_shared_account | Reading accounts from CSV: email_account.csv
+2026-02-10 21:57:50,401 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-10 21:57:50,412 | INFO     | write_csv_to_s3 | Writing CSV to s3://mmpatching-custom-patchbaseline-dev/post_patch_notification/mw-post-patch-output.csv
+2026-02-10 21:57:51,628 | INFO     | send_email_ses | Sending SES email
+2026-02-10 21:57:52,573 | INFO     | send_email_ses | SES email sent successfully
+2026-02-10 21:57:52,575 | INFO     | post_patch_function | Post patch processing completed successfully
+2026-02-10 21:57:52,578 | INFO     | <module> | Script execution finished
