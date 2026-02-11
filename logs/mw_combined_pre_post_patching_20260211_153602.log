@@ -1,0 +1,60 @@
+2026-02-11 15:36:02,469 | INFO     | setup_logger | Logging initialized. Log file: logs/mw_patch_20260211_153602.log
+2026-02-11 15:36:02,469 | INFO     | <module> | Running Pre-Patch script
+2026-02-11 15:36:02,469 | INFO     | pre_patch_notification | Starting Maintenance Window pre-patch scan
+2026-02-11 15:36:02,469 | INFO     | read_csv_local | Reading account ids, role_name and region from CSV: accounts.csv
+2026-02-11 15:36:02,469 | INFO     | pre_patch_notification | Processing account=862683271180, region=us-east-1, role=Python_SSM_Role_POC
+2026-02-11 15:36:02,469 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-11 15:36:04,217 | INFO     | pre_patch_notification | Checking MW java-testing (ID: mw-0127e3cd140fe33fb)
+2026-02-11 15:36:04,217 | DEBUG    | pre_patch_notification | Skipping MW java-testing (MW not starting with 'mmpatching')
+2026-02-11 15:36:04,217 | INFO     | pre_patch_notification | Checking MW mmpatching-rnd-mmema-lower (ID: mw-02634a7d8df1a7c63)
+2026-02-11 15:36:04,217 | DEBUG    | runs_today | Evaluating NextExecutionTime: 2026-02-11T21:32-05:00
+2026-02-11 15:36:04,217 | DEBUG    | runs_today | runs_today result: False
+2026-02-11 15:36:04,218 | INFO     | pre_patch_notification | Checking MW rnd-sandbox-linux-patching (ID: mw-03d3a2dd5ae0199be)
+2026-02-11 15:36:04,218 | DEBUG    | pre_patch_notification | Skipping MW rnd-sandbox-linux-patching (no NextExecutionTime)
+2026-02-11 15:36:04,218 | INFO     | pre_patch_notification | Checking MW al2023-patch-window (ID: mw-0666e9f0b64f596fb)
+2026-02-11 15:36:04,218 | DEBUG    | pre_patch_notification | Skipping MW al2023-patch-window (no NextExecutionTime)
+2026-02-11 15:36:04,218 | INFO     | pre_patch_notification | Checking MW mmpatching_dummy_2 (ID: mw-068e5e881af11c400)
+2026-02-11 15:36:04,218 | DEBUG    | runs_today | Evaluating NextExecutionTime: 2026-02-11T10:09Z
+2026-02-11 15:36:04,218 | DEBUG    | runs_today | runs_today result: True
+2026-02-11 15:36:04,218 | INFO     | get_target_count | Resolving target count for MW mw-068e5e881af11c400
+2026-02-11 15:36:04,637 | INFO     | get_target_count | Target count for MW mw-068e5e881af11c400: 0
+2026-02-11 15:36:04,637 | INFO     | pre_patch_notification | MW running today: mmpatching_dummy_2 (targets=0)
+2026-02-11 15:36:04,637 | INFO     | pre_patch_notification | Checking MW Test (ID: mw-0782d1acad02f9d9b)
+2026-02-11 15:36:04,638 | DEBUG    | pre_patch_notification | Skipping MW Test (MW not starting with 'mmpatching')
+2026-02-11 15:36:04,638 | INFO     | pre_patch_notification | Checking MW mm-overridebaseline-poc (ID: mw-07ad93525f891415a)
+2026-02-11 15:36:04,638 | DEBUG    | pre_patch_notification | Skipping MW mm-overridebaseline-poc (no NextExecutionTime)
+2026-02-11 15:36:04,638 | INFO     | pre_patch_notification | Checking MW mmpatchingDummy (ID: mw-0a69d443878c3dde6)
+2026-02-11 15:36:04,638 | DEBUG    | pre_patch_notification | Skipping MW mmpatchingDummy (no NextExecutionTime)
+2026-02-11 15:36:04,638 | INFO     | pre_patch_notification | Checking MW first-attempt (ID: mw-0d9f40d2d41e65f7a)
+2026-02-11 15:36:04,638 | DEBUG    | pre_patch_notification | Skipping MW first-attempt (MW not starting with 'mmpatching')
+2026-02-11 15:36:04,638 | INFO     | pre_patch_notification | Summary of Maintenance Windows running today (Skipping MW not starting with 'mmpatching'):
+2026-02-11 15:36:04,638 | INFO     | pre_patch_notification |   1) AccountId=862683271180 | MWName=mmpatching_dummy_2 | MWId=mw-068e5e881af11c400 | TargetCount=0
+2026-02-11 15:36:04,638 | INFO     | load_shared_account | To load shared or email account details from CSV: email_account.csv
+2026-02-11 15:36:04,640 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-11 15:36:04,655 | INFO     | write_csv_to_s3 | Writing CSV to s3://mmpatching-custom-patchbaseline-dev/pre_patch_notification/mw-running-today-output.csv
+2026-02-11 15:36:06,252 | INFO     | write_csv_to_s3 | CSV successfully written to S3
+2026-02-11 15:36:06,253 | INFO     | send_email_ses | Sending SES email to ['abhishek.jha@modmed.com']
+2026-02-11 15:36:07,487 | INFO     | send_email_ses | SES email sent successfully. MessageId=0100019c4c2a4fd1-6fc7f69b-d9f1-4735-a07e-58e661119b38-000000
+2026-02-11 15:36:07,491 | INFO     | <module> | Pre-Patch notification completed successfully:
+2026-02-11 15:36:07,492 | INFO     | <module> | Waiting 5 minutes before running Post-Patch script...
+2026-02-11 15:36:07,492 | INFO     | <module> | Running Post-Patch Script
+2026-02-11 15:36:07,492 | INFO     | post_patch_function | Starting Maintenance Window post-patch scan
+2026-02-11 15:36:07,492 | INFO     | load_shared_account | To load shared or email account details from CSV: email_account.csv
+2026-02-11 15:36:07,492 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-11 15:36:07,546 | INFO     | read_csv_from_s3 | Reading CSV from s3://mmpatching-custom-patchbaseline-dev/pre_patch_notification/mw-running-today-output.csv
+2026-02-11 15:36:08,650 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-11 15:36:08,743 | DEBUG    | get_patch_status_counts | Starting patch status evaluation for Maintenance Window: mw-068e5e881af11c400
+2026-02-11 15:36:08,743 | INFO     | get_patch_status_counts | Processing MaintenanceWindowId: mw-068e5e881af11c400
+2026-02-11 15:36:10,286 | INFO     | get_patch_status_counts | Using latest WindowExecutionId: e551ca10-aa79-4ce3-8a78-f5ac460b3a2d
+2026-02-11 15:36:10,648 | DEBUG    | get_patch_status_counts | Found 0 tasks for WindowExecutionId e551ca10-aa79-4ce3-8a78-f5ac460b3a2d
+2026-02-11 15:36:10,648 | INFO     | get_patch_status_counts | Patch summary for mw-068e5e881af11c400 → Success: 0, Failure: 0
+2026-02-11 15:36:10,648 | INFO     | post_patch_function | Summary of Maintenance Windows Instances Patching Status
+2026-02-11 15:36:10,648 | INFO     | post_patch_function |   1) AccountId=862683271180 | MWName=mmpatching_dummy_2 | MWId=mw-068e5e881af11c400 | TargetCount=0 | Success=0 | Failure=0
+2026-02-11 15:36:10,648 | INFO     | load_shared_account | To load shared or email account details from CSV: email_account.csv
+2026-02-11 15:36:10,649 | INFO     | assume_role | Creating session using local credentials (account_id=862683271180, role_name=Python_SSM_Role_POC, region=us-east-1)
+2026-02-11 15:36:10,662 | INFO     | write_csv_to_s3 | Writing CSV to s3://mmpatching-custom-patchbaseline-dev/post_patch_notification/mw-post-patch-output.csv
+2026-02-11 15:36:12,182 | INFO     | write_csv_to_s3 | CSV successfully written to S3
+2026-02-11 15:36:12,183 | INFO     | send_email_ses | Sending SES email to ['abhishek.jha@modmed.com']
+2026-02-11 15:36:13,337 | INFO     | send_email_ses | SES email sent successfully. MessageId=0100019c4c2a66b4-ffc33645-01d0-4814-bf2c-96ccb0d7dd15-000000
+2026-02-11 15:36:13,343 | INFO     | post_patch_function | Post patch processing completed successfully
+2026-02-11 15:36:13,351 | INFO     | <module> | Post-Patch script completed successfully
